@@ -21,7 +21,7 @@
         <div class="col-md-8">
             <div class="row">
                @foreach($vedios as $v)
-                @if($v->section == 1) 
+                @if($v->section == 1 && $v->published == 1) 
                 <div class="col-md-6">
                   
                          {!! $v->link  !!}
@@ -39,7 +39,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         @foreach($vedios as $v)
-                            @if($v->section == 1) 
+                            @if($v->section == 1 && $v->published == 1) 
                                     <div class="col-md-6">
                                          {!! $v->link  !!}
                                         <h6>
@@ -57,7 +57,7 @@
         <div class="col-md-4">
             <div class="row">
                 @foreach($posts as $p)
-                @if($p->section == 2)   
+                @if($p->section == 2 && $p->published == 1)   
                 <div class="col-md-12">
                       <img alt="Bootstrap Image Preview" src="{{('/'.$p->image)}}" style="width: 130px; height: 150px">
                     <h6>
@@ -72,7 +72,7 @@
             </div>
             <div class="row">
             @foreach($posts as $p)
-                @if($p->section == 2) 
+                @if($p->section == 2 && $p->published == 1) 
                 <div class="col-md-6">
                     <img alt="Bootstrap Image Preview" src="{{('/'.$p->image)}}" style="width: 130px; height: 150px">
                     
